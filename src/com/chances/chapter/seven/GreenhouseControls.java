@@ -4,7 +4,33 @@ public class GreenhouseControls extends Controller {
 
 	private boolean light = false;
 	private boolean water = false;
+	private boolean wind = false;
 	private String thermostat = "Day";
+	
+	private class WindOn extends Event {
+		public WindOn(long eventTime) {
+			super(eventTime);
+		}
+		public void action() {
+			wind = true;
+		}
+		public String description() {
+			return "wind is on";
+		}
+	}
+	
+	private class WindOff extends Event {
+		public WindOff(long eventTime) {
+			super(eventTime);
+		}
+		public void action() {
+			wind = false;
+		}
+		public String description() {
+			return "wind is off";
+		}
+	}
+	
 	private class LightOn extends Event {
 		public LightOn(long eventTime) {
 			super(eventTime);
