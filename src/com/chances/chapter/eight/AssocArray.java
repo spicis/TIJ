@@ -2,6 +2,7 @@ package com.chances.chapter.eight;
 
 import java.util.Dictionary;
 import java.util.Enumeration;
+import java.util.Hashtable;
 import java.util.Vector;
 
 public class AssocArray extends Dictionary {
@@ -44,14 +45,24 @@ public class AssocArray extends Dictionary {
 	}
 	
 	public static void main(String[] args) {
-		AssocArray aa = new AssocArray();
+//		AssocArray aa = new AssocArray();
+//		for(char c = 'a'; c <= 'z'; c++) {
+//			aa.put(String.valueOf(c), String.valueOf(c).toUpperCase());
+//		}
+//		char[] ca = {'a', 'e', 'i', 'o', 'u'};
+//		for(int i = 0; i < ca.length; i++) {
+//			System.out.println("Uppercase: " +
+//					aa.get(String.valueOf(ca[i])));
+//		}
+		
+		Hashtable ht = new Hashtable();
 		for(char c = 'a'; c <= 'z'; c++) {
-			aa.put(String.valueOf(c), String.valueOf(c).toUpperCase());
+			ht.put(String.valueOf(c), String.valueOf(c).toUpperCase());
 		}
 		char[] ca = {'a', 'e', 'i', 'o', 'u'};
 		for(int i = 0; i < ca.length; i++) {
-			System.out.println("Uppercase: " +
-					aa.get(String.valueOf(ca[i])));
+			System.out.println("Uppercase: " + 
+					ht.get(String.valueOf(ca[i])));
 		}
 	}
 }
