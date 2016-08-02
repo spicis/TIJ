@@ -14,7 +14,6 @@ class Wind5 implements Instrument5 {
 
 	@Override
 	public void adjust() {
-		// TODO Auto-generated method stub
 
 	}
 

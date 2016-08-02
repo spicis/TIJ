@@ -13,7 +13,6 @@ class Percussion4 extends Instrument4 {
 	
 	@Override
 	public void adjust() {
-		// TODO Auto-generated method stub
 
 	}
 
